@@ -1,0 +1,73 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    margin-left: 55px;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .horzNav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    width: 65%;
+    right: 0;
+    height: 96px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 66px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(81.5485px);
+      z-index: 0;
+    }
+    li {
+      position: relative;
+      counter-increment: liCounter;
+      &::before {
+        position: absolute;
+        counter-increment: a;
+        content: counter(liCounter) ".";
+        content: counter(liCounter, decimal-leading-zero);
+        font-weight: bold;
+        left: -20px;
+        background: linear-gradient(
+          to right,
+          transparent 2em,
+          currentColor 2em
+        );
+        z-index: 1;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      &.active::after,
+      &:hover::after {
+        position: absolute;
+        content: "";
+        width: calc(100% + 35px);
+        height: 2px;
+        background-color: white;
+        bottom: -23px;
+        right: -7px;
+      }
+      &:not(.active)::after {
+        opacity: 0.4;
+      }
+    }
+  }
+  .vertNav {
+    display: none;
+  }
+}

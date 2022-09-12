@@ -1,5 +1,141 @@
-header {
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+* {
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: #0b0d17;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bellefair", serif;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .container h1 {
+    background-color: red;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .container h1 {
+    background-color: green;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .container h1 {
+    background-color: blue;
+  }
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  margin-left: 55px;
+}
+nav .logo img {
+  width: 48px;
+  height: 48px;
+}
+nav .horzNav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  width: 65%;
+  right: 0;
+  height: 96px;
+}
+nav .horzNav::before {
+  position: absolute;
+  content: "";
   width: 100%;
-  background-color: firebrick;
-  position: fixed;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(81.5485px);
+          backdrop-filter: blur(81.5485px);
+  z-index: 0;
+}
+nav .horzNav li {
+  position: relative;
+  counter-increment: liCounter;
+}
+nav .horzNav li::before {
+  position: absolute;
+  counter-increment: a;
+  content: counter(liCounter) ".";
+  content: counter(liCounter, decimal-leading-zero);
+  font-weight: bold;
+  left: -20px;
+  background: linear-gradient(to right, transparent 2em, currentColor 2em);
+  z-index: 1;
+}
+nav .horzNav li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav .horzNav li.active::after, nav .horzNav li:hover::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 35px);
+  height: 2px;
+  background-color: white;
+  bottom: -23px;
+  right: -7px;
+}
+nav .horzNav li:not(.active)::after {
+  opacity: 0.4;
+}
+nav .vertNav {
+  display: none;
+}
+
+#home {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0b0d17;
+  background-image: url(/imgs/home-bg-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,10 @@
+#home {
+  min-height: 100vh;
+  width: 100%;
+  background: {
+    color: $xblack;
+    image: url(/imgs/home-bg-desktop.jpg);
+    size: cover;
+    repeat: no-repeat;
+  }
+}

@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: $xblack;
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bellefair", serif;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .container h1 {
+    background-color: red;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .container h1 {
+    background-color: green;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .container h1 {
+    background-color: blue;
+  }
+}
