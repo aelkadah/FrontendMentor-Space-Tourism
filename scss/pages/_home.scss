@@ -1,10 +1,78 @@
 #home {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  min-height: 100vh;
   background: {
     color: $xblack;
-    image: url(/imgs/home-bg-desktop.jpg);
     size: cover;
     repeat: no-repeat;
+    image: url(/imgs/home-bg-desktop.jpg);
+  }
+
+  @include respond(tablet) {
+    background-image: url(/imgs/home-bg-tablet.jpg);
+    background-position: bottom;
+  }
+  @include respond(mobile) {
+    background-image: url(/imgs/home-bg-mobile.jpg);
+    background-position: bottom;
+  }
+  .container {
+    // position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    @include respond(tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex: 1;
+    }
+    .text {
+      h2 {
+        color: $xColor;
+        font-family: $barlow;
+        font-weight: normal;
+        letter-spacing: 4px;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 88px;
+        & + p {
+          max-width: 420px;
+        }
+      }
+      @include respond(tablet) {
+        flex: 1;
+        padding-top: 25%;
+        text-align: center;
+      }
+    }
+    .exploreBtn {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      a {
+        background-color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: "Bellefair", serif;
+        padding: 100px 43.5px;
+        font-weight: normal;
+        border-radius: 100%;
+        font-size: 32px;
+        color: $xblack;
+      }
+    }
   }
 }

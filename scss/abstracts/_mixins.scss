@@ -3,3 +3,30 @@
     #{$prefix}#{$property}: $parameters;
   }
 }
+
+// respond is the name of your mixin
+
+@mixin respond($breakpoint) {
+  // $breakpoint is simply a variable that can have several values
+
+  @if $breakpoint==tablet {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobilemin {
+    @media only screen and (min-width: 767px) {
+      @content;
+    }
+  }
+}

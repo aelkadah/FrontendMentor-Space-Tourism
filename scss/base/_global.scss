@@ -27,25 +27,16 @@ h6 {
   .container {
     width: 750px;
   }
-  .container h1 {
-    background-color: red;
-  }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
-  .container h1 {
-    background-color: green;
-  }
 }
 /* Large */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
-  }
-  .container h1 {
-    background-color: blue;
   }
 }

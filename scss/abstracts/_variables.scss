@@ -1,2 +1,15 @@
+$belfair: "Bellefair", serif;
+$barlow: "Barlow Condensed", sans-serif;
+
 $xblack: #0b0d17;
 $xColor: #d0d6f9;
+
+$padding: 50px;
+
+// CSS3 Media Queries Breakpoints
+$small-min: "min-width: 768px";
+$small-max: "max-width: 767px";
+$medium-min: "min-width: 992px";
+$medium-max: "max-width: 991px";
+$large-min: "min-width: 1200px";
+$large-max: "max-width: 1199px";

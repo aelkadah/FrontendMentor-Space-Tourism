@@ -3,8 +3,15 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-top: 40px;
+  @include respond(tablet) {
+    padding-top: 20px;
+  }
   .logo {
     margin-left: 55px;
+    @include respond(mobile) {
+      margin-left: 25px;
+    }
     img {
       width: 48px;
       height: 48px;
@@ -18,9 +25,13 @@ nav {
     align-items: center;
     gap: 20px;
     list-style: none;
-    width: 65%;
+    width: 55%;
     right: 0;
-    height: 96px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @include respond(mobile) {
+      display: none;
+    }
     &::before {
       position: absolute;
       content: "";
@@ -29,6 +40,18 @@ nav {
       background: rgba(255, 255, 255, 0.04);
       backdrop-filter: blur(81.5485px);
       z-index: 0;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 300px;
+      height: 1px;
+      background-color: #fff;
+      left: -280px;
+      opacity: 0.2;
+      @include respond(tablet) {
+        display: none;
+      }
     }
     li {
       position: relative;
@@ -45,7 +68,6 @@ nav {
           transparent 2em,
           currentColor 2em
         );
-        z-index: 1;
       }
       a {
         color: white;
@@ -60,14 +82,81 @@ nav {
         height: 2px;
         background-color: white;
         bottom: -23px;
-        right: -7px;
+        right: -8px;
       }
       &:not(.active)::after {
-        opacity: 0.4;
+        opacity: 0.6;
       }
     }
   }
-  .vertNav {
+  .menuBtn {
     display: none;
+    font-size: 24px;
+    margin-right: 55px;
+    z-index: 5;
+    a {
+      color: #fff;
+    }
+    @include respond(mobile) {
+      display: block;
+      margin-right: 25px;
+    }
+  }
+  .vertNav {
+    position: absolute;
+    min-height: 100%;
+    width: 60%;
+    top: 0px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    list-style: none;
+    padding-top: 80px;
+    padding-left: 40px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    &.active {
+      display: flex !important;
+      @include respond(mobilemin) {
+        display: none !important;
+      }
+    }
+    li {
+      position: relative;
+      counter-increment: liCounter;
+      &::before {
+        position: absolute;
+        counter-increment: a;
+        content: counter(liCounter) ".";
+        content: counter(liCounter, decimal-leading-zero);
+        font-weight: bold;
+        left: -20px;
+        background: linear-gradient(
+          to right,
+          transparent 2em,
+          currentColor 2em
+        );
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      &.active::after,
+      &:hover::after {
+        color: red;
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 100%;
+        background-color: #fff;
+        right: 0;
+        top: 0;
+      }
+      &:not(.active)::after {
+        opacity: 0.6;
+      }
+    }
   }
 }
