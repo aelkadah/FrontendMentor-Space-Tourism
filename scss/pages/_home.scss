@@ -8,19 +8,18 @@
     color: $xblack;
     size: cover;
     repeat: no-repeat;
-    image: url(/imgs/home-bg-desktop.jpg);
+    image: url(/imgs/home/background-desktop.jpg);
   }
 
   @include respond(tablet) {
-    background-image: url(/imgs/home-bg-tablet.jpg);
+    background-image: url(/imgs/home/background-tablet.jpg);
     background-position: bottom;
   }
   @include respond(mobile) {
-    background-image: url(/imgs/home-bg-mobile.jpg);
+    background-image: url(/imgs/home/background-mobile.jpg);
     background-position: bottom;
   }
   .container {
-    // position: absolute;
     bottom: 0;
     padding-bottom: 50px;
     display: grid;
@@ -36,17 +35,18 @@
     .text {
       h2 {
         color: $xColor;
-        font-family: $barlow;
         font-weight: normal;
         letter-spacing: 4px;
         font-size: 16px;
         text-transform: uppercase;
       }
       h1 {
+        font-family: $belfair;
         text-transform: uppercase;
         font-weight: normal;
-        font-size: 88px;
+        font-size: 96px;
         & + p {
+          color: $xColor;
           max-width: 420px;
         }
       }
@@ -66,12 +66,15 @@
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-family: "Bellefair", serif;
+        font-family: $belfair;
         padding: 100px 43.5px;
         font-weight: normal;
         border-radius: 100%;
         font-size: 32px;
         color: $xblack;
+        &:hover {
+          outline: 40px solid hsl(0deg 0% 10% / 80%);
+        }
       }
     }
   }

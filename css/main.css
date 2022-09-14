@@ -14,17 +14,9 @@ html {
 
 body {
   font-family: "Barlow Condensed", sans-serif;
+  font-weight: lighter;
   background-color: #0b0d17;
   color: #fff;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Bellefair", serif;
 }
 
 .container {
@@ -228,17 +220,17 @@ nav .vertNav li:not(.active)::after {
   background-color: #0b0d17;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/imgs/home-bg-desktop.jpg);
+  background-image: url(/imgs/home/background-desktop.jpg);
 }
 @media only screen and (max-width: 992px) {
   #home {
-    background-image: url(/imgs/home-bg-tablet.jpg);
+    background-image: url(/imgs/home/background-tablet.jpg);
     background-position: bottom;
   }
 }
 @media only screen and (max-width: 768px) {
   #home {
-    background-image: url(/imgs/home-bg-mobile.jpg);
+    background-image: url(/imgs/home/background-mobile.jpg);
     background-position: bottom;
   }
 }
@@ -260,18 +252,19 @@ nav .vertNav li:not(.active)::after {
 }
 #home .container .text h2 {
   color: #d0d6f9;
-  font-family: "Barlow Condensed", sans-serif;
   font-weight: normal;
   letter-spacing: 4px;
   font-size: 16px;
   text-transform: uppercase;
 }
 #home .container .text h1 {
+  font-family: "Bellefair", serif;
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 88px;
+  font-size: 96px;
 }
 #home .container .text h1 + p {
+  color: #d0d6f9;
   max-width: 420px;
 }
 @media only screen and (max-width: 992px) {
@@ -298,4 +291,161 @@ nav .vertNav li:not(.active)::after {
   border-radius: 100%;
   font-size: 32px;
   color: #0b0d17;
+}
+#home .container .exploreBtn a:hover {
+  outline: 40px solid hsla(0deg, 0%, 10%, 0.8);
+}
+
+#destination {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0b0d17;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/imgs/destination/background-desktop.jpg);
+}
+@media only screen and (max-width: 992px) {
+  #destination {
+    background-image: url(/imgs/destination/background-tablet.jpg);
+    background-position: bottom;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #destination {
+    background-image: url(/imgs/destination/background-mobile.jpg);
+    background-position: bottom;
+  }
+}
+#destination .container {
+  padding-bottom: 20px;
+}
+#destination .container h2 {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+@media only screen and (max-width: 992px) {
+  #destination .container h2 {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+#destination .container h2 span {
+  font-weight: bold;
+  color: rgb(84, 84, 84);
+  padding-right: 5px;
+}
+#destination .container .destContent {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+}
+@media only screen and (max-width: 992px) {
+  #destination .container .destContent {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+#destination .container .destContent .image img {
+  position: relative;
+  width: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 992px) {
+  #destination .container .destContent .image img {
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 992px) {
+  #destination .container .destContent .text {
+    text-align: center;
+  }
+}
+#destination .container .destContent .text .destUl {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+@media only screen and (max-width: 992px) {
+  #destination .container .destContent .text .destUl {
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+}
+#destination .container .destContent .text .destUl li {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+  cursor: pointer;
+}
+#destination .container .destContent .text .destUl li.active, #destination .container .destContent .text .destUl li:hover {
+  color: #fff;
+  position: relative;
+}
+#destination .container .destContent .text .destUl li.active::before, #destination .container .destContent .text .destUl li:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
+  background-color: #fff;
+}
+#destination .container .destContent .text .destName {
+  margin-top: 30px;
+  font-family: "Bellefair", serif;
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+@media only screen and (max-width: 992px) {
+  #destination .container .destContent .text .destName {
+    margin-bottom: 10px;
+  }
+}
+#destination .container .destContent .text .destDescription {
+  color: #d0d6f9;
+  width: 100%;
+  line-height: 1.6;
+}
+#destination .container .destContent .text .destNums {
+  padding-top: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #d0d6f9;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+@media only screen and (max-width: 992px) {
+  #destination .container .destContent .text .destNums {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+}
+#destination .container .destContent .text .destNums h5 {
+  font-weight: 100;
+  color: #d0d6f9;
+  text-transform: uppercase;
+}
+#destination .container .destContent .text .destNums h1 {
+  font-family: "Bellefair", serif;
+  font-weight: 100;
+  font-size: 36px;
+  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */
