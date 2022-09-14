@@ -12,6 +12,7 @@
 //   }
 // }
 
+// Vertical Navigation
 let menuBtn = document.querySelector(".menuBtn a");
 let menuIcon = document.querySelector(".menuBtn a i");
 let vertNav = document.querySelector(".vertNav");

@@ -448,4 +448,140 @@ nav .vertNav li:not(.active)::after {
   font-weight: 100;
   font-size: 36px;
   margin-top: 10px;
+}
+
+#crew {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0b0d17;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/imgs/crew/background-desktop.jpg);
+}
+@media only screen and (max-width: 992px) {
+  #crew {
+    background-image: url(/imgs/crew/background-tablet.jpg);
+    background-position: bottom;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #crew {
+    background-image: url(/imgs/crew/background-mobile.jpg);
+    background-position: bottom;
+  }
+}
+#crew .container h2 {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+@media only screen and (max-width: 768px) {
+  #crew .container h2 {
+    text-align: center;
+  }
+}
+#crew .container h2 span {
+  font-weight: bold;
+  color: rgb(84, 84, 84);
+  padding-right: 5px;
+}
+#crew .container .crewContent {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+}
+@media only screen and (max-width: 992px) {
+  #crew .container .crewContent {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #crew .container .crewContent {
+    flex-direction: column-reverse;
+  }
+}
+#crew .container .crewContent .text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 992px) {
+  #crew .container .crewContent .text {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #crew .container .crewContent .text {
+    flex-direction: column-reverse;
+  }
+}
+#crew .container .crewContent .text .x h2 {
+  font-family: "Bellefair", serif;
+  color: #ccc;
+}
+#crew .container .crewContent .text .x h1 {
+  font-family: "Bellefair", serif;
+  font-weight: 100;
+  color: #fff;
+  font-size: 60px;
+  margin: 10px 0;
+}
+#crew .container .crewContent .text .x p {
+  color: #d0d6f9;
+  font-size: 20px;
+  width: 100%;
+  line-height: 1.6;
+  width: 75%;
+}
+@media only screen and (max-width: 992px) {
+  #crew .container .crewContent .text .x p {
+    width: 100%;
+  }
+}
+#crew .container .crewContent .text .bullets {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+@media only screen and (max-width: 992px) {
+  #crew .container .crewContent .text .bullets {
+    justify-content: center;
+  }
+}
+#crew .container .crewContent .text .bullets li {
+  background: rgb(117, 117, 117);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+#crew .container .crewContent .text .bullets li.active {
+  background-color: #fff;
+}
+#crew .container .crewContent .image img {
+  position: relative;
+  width: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 992px) {
+  #crew .container .crewContent .image img {
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=main.css.map */
