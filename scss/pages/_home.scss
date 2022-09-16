@@ -8,15 +8,15 @@
     color: $xblack;
     size: cover;
     repeat: no-repeat;
-    image: url(/imgs/home/background-desktop.jpg);
+    image: url(../imgs/home/background-desktop.jpg);
   }
 
   @include respond(tablet) {
-    background-image: url(/imgs/home/background-tablet.jpg);
+    background-image: url(../imgs/home/background-tablet.jpg);
     background-position: bottom;
   }
   @include respond(mobile) {
-    background-image: url(/imgs/home/background-mobile.jpg);
+    background-image: url(../imgs/home/background-mobile.jpg);
     background-position: bottom;
   }
   .container {

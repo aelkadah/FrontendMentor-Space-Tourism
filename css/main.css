@@ -227,17 +227,17 @@ nav .vertNav li:not(.active)::after {
   background-color: #0b0d17;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/imgs/home/background-desktop.jpg);
+  background-image: url(../imgs/home/background-desktop.jpg);
 }
 @media only screen and (max-width: 992px) {
   #home {
-    background-image: url(/imgs/home/background-tablet.jpg);
+    background-image: url(../imgs/home/background-tablet.jpg);
     background-position: bottom;
   }
 }
 @media only screen and (max-width: 768px) {
   #home {
-    background-image: url(/imgs/home/background-mobile.jpg);
+    background-image: url(../imgs/home/background-mobile.jpg);
     background-position: bottom;
   }
 }
@@ -313,17 +313,17 @@ nav .vertNav li:not(.active)::after {
   background-color: #0b0d17;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/imgs/destination/background-desktop.jpg);
+  background-image: url(../imgs/destination/background-desktop.jpg);
 }
 @media only screen and (max-width: 992px) {
   #destination {
-    background-image: url(/imgs/destination/background-tablet.jpg);
+    background-image: url(../imgs/destination/background-tablet.jpg);
     background-position: bottom;
   }
 }
 @media only screen and (max-width: 768px) {
   #destination {
-    background-image: url(/imgs/destination/background-mobile.jpg);
+    background-image: url(../imgs/destination/background-mobile.jpg);
     background-position: bottom;
   }
 }
@@ -469,17 +469,17 @@ nav .vertNav li:not(.active)::after {
   background-color: #0b0d17;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/imgs/crew/background-desktop.jpg);
+  background-image: url(../imgs/crew/background-desktop.jpg);
 }
 @media only screen and (max-width: 992px) {
   #crew {
-    background-image: url(/imgs/crew/background-tablet.jpg);
+    background-image: url(../imgs/crew/background-tablet.jpg);
     background-position: bottom;
   }
 }
 @media only screen and (max-width: 768px) {
   #crew {
-    background-image: url(/imgs/crew/background-mobile.jpg);
+    background-image: url(../imgs/crew/background-mobile.jpg);
     background-position: bottom;
   }
 }
@@ -606,18 +606,18 @@ nav .vertNav li:not(.active)::after {
   background-color: #0b0d17;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/imgs/technology/background-desktop.jpg);
+  background-image: url(../imgs/technology/background-desktop.jpg);
 }
 @media only screen and (max-width: 992px) {
   #technology {
-    background-image: url(/imgs/technology/background-tablet.jpg);
+    background-image: url(../imgs/technology/background-tablet.jpg);
     background-position: bottom;
     justify-content: flex-start;
   }
 }
 @media only screen and (max-width: 768px) {
   #technology {
-    background-image: url(/imgs/technology/background-mobile.jpg);
+    background-image: url(../imgs/technology/background-mobile.jpg);
     background-position: bottom;
   }
 }
