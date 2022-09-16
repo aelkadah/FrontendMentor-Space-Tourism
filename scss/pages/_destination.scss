@@ -23,7 +23,7 @@
     max-width: 100%;
     padding-bottom: 20px;
     h2 {
-      @include respond(tablet) {
+      @include respond(mobile) {
         margin-bottom: 50px;
         text-align: center;
       }

@@ -331,7 +331,7 @@ nav .vertNav li:not(.active)::after {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   #destination .container h2 {
     margin-bottom: 50px;
     text-align: center;

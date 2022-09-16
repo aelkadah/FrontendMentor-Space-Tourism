@@ -20,7 +20,6 @@
     background-position: bottom;
   }
   .container {
-    // padding-bottom: 20px;
     h2 {
       @include respond(mobile) {
         text-align: center;
