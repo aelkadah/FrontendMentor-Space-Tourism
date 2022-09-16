@@ -51,7 +51,6 @@ function crewData() {
 
       paginationLis.forEach((li) => {
         li.addEventListener("click", () => {
-          console.log(`clicked`);
           counter = li.getAttribute("id");
           paginationLis.forEach((li) => {
             li.classList.remove("active");
@@ -61,7 +60,6 @@ function crewData() {
           memberRole.innerHTML = `${data[counter].role}`;
           memberBio.innerHTML = `${data[counter].bio}`;
           memberImg.src = `${data[counter].images.png}`;
-          dataChecker();
         });
       });
     });

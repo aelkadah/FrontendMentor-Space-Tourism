@@ -20,6 +20,7 @@
     background-position: bottom;
   }
   .container {
+    max-width: 100%;
     padding-bottom: 20px;
     h2 {
       @include respond(tablet) {
@@ -104,6 +105,7 @@
           font-weight: 100;
           @include respond(tablet) {
             margin-bottom: 10px;
+            font-size: 70px;
           }
         }
         .destDescription {

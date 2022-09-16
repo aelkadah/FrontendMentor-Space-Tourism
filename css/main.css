@@ -50,6 +50,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-top: 40px;
+  z-index: 999;
 }
 @media only screen and (max-width: 992px) {
   nav {
@@ -148,6 +149,7 @@ nav .menuBtn {
 }
 nav .menuBtn a {
   color: #fff;
+  cursor: pointer;
 }
 @media only screen and (max-width: 768px) {
   nav .menuBtn {
@@ -321,6 +323,7 @@ nav .vertNav li:not(.active)::after {
   }
 }
 #destination .container {
+  max-width: 100%;
   padding-bottom: 20px;
 }
 #destination .container h2 {
@@ -415,6 +418,7 @@ nav .vertNav li:not(.active)::after {
 @media only screen and (max-width: 992px) {
   #destination .container .destContent .text .destName {
     margin-bottom: 10px;
+    font-size: 70px;
   }
 }
 #destination .container .destContent .text .destDescription {
@@ -545,6 +549,7 @@ nav .vertNav li:not(.active)::after {
 @media only screen and (max-width: 992px) {
   #crew .container .crewContent .text .x p {
     width: 100%;
+    padding-bottom: 20px;
   }
 }
 #crew .container .crewContent .text .bullets {
@@ -583,5 +588,178 @@ nav .vertNav li:not(.active)::after {
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+#technology {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0b0d17;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/imgs/technology/background-desktop.jpg);
+}
+@media only screen and (max-width: 992px) {
+  #technology {
+    background-image: url(/imgs/technology/background-tablet.jpg);
+    background-position: bottom;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #technology {
+    background-image: url(/imgs/technology/background-mobile.jpg);
+    background-position: bottom;
+  }
+}
+#technology .container h2 {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+@media only screen and (max-width: 768px) {
+  #technology .container h2 {
+    text-align: center;
+  }
+}
+#technology .container h2 span {
+  font-weight: bold;
+  color: rgb(84, 84, 84);
+  padding-right: 5px;
+}
+#technology .container .techContent {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  gap: 10%;
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #technology .container .techContent {
+    flex-direction: column-reverse;
+  }
+}
+#technology .container .techContent .text {
+  position: relative;
+}
+#technology .container .techContent .text .x {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent .text .x {
+    flex-direction: column;
+    transform: none;
+  }
+}
+#technology .container .techContent .text .x .pagination {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  counter-reset: section;
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent .text .x .pagination {
+    flex-direction: row;
+  }
+}
+#technology .container .techContent .text .x .pagination li {
+  font-family: "Bellefair", serif;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: white;
+  position: relative;
+}
+#technology .container .techContent .text .x .pagination li::before {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#technology .container .techContent .text .x .pagination li.active {
+  background-color: #fff;
+  color: #0b0d17;
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent .text .x .dataCont {
+    padding-bottom: 20px;
+  }
+}
+#technology .container .techContent .text .x .dataCont h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 100;
+  color: #d0d6f9;
+}
+#technology .container .techContent .text .x .dataCont h1 {
+  font-family: "Bellefair", serif;
+  font-weight: 100;
+  color: #fff;
+  font-size: 60px;
+  margin: 10px 0;
+}
+#technology .container .techContent .text .x .dataCont p {
+  color: #d0d6f9;
+  font-size: 20px;
+  width: 100%;
+  line-height: 1.6;
+  width: 75%;
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent .text .x .dataCont p {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent .text .x .dataCont {
+    text-align: center;
+  }
+}
+#technology .container .techContent .images .portrait {
+  height: auto;
+  width: -webkit-fill-available;
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent .images .portrait {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #technology .container .techContent .images .portrait {
+    display: none;
+  }
+}
+#technology .container .techContent .images .landscape {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  #technology .container .techContent .images .landscape {
+    display: block !important;
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,154 @@
+#technology {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  min-height: 100vh;
+  background: {
+    color: $xblack;
+    size: cover;
+    repeat: no-repeat;
+    image: url(/imgs/technology/background-desktop.jpg);
+  }
+  @include respond(tablet) {
+    background-image: url(/imgs/technology/background-tablet.jpg);
+    background-position: bottom;
+    justify-content: flex-start;
+  }
+  @include respond(mobile) {
+    background-image: url(/imgs/technology/background-mobile.jpg);
+    background-position: bottom;
+  }
+  .container {
+    h2 {
+      @include respond(mobile) {
+        text-align: center;
+      }
+      font-weight: 100;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      span {
+        font-weight: bold;
+        color: rgb(84, 84, 84);
+        padding-right: 5px;
+      }
+    }
+    .techContent {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 60% 30%;
+      gap: 10%;
+      @include respond(tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+      }
+      @include respond(mobile) {
+        flex-direction: column-reverse;
+      }
+      .text {
+        position: relative;
+        .x {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 50px;
+          @include respond(tablet) {
+            flex-direction: column;
+            transform: none;
+          }
+          .pagination {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            counter-reset: section;
+            @include respond(tablet) {
+              flex-direction: row;
+            }
+            li {
+              font-family: $belfair;
+              font-size: 24px;
+              border: 1px solid #ccc;
+              border-radius: 50%;
+              width: 60px;
+              height: 60px;
+              color: white;
+              position: relative;
+              &::before {
+                counter-increment: section;
+                content: counter(section);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+              &.active {
+                background-color: #fff;
+                color: $xblack;
+              }
+            }
+          }
+          .dataCont {
+            @include respond(tablet) {
+              padding-bottom: 20px;
+            }
+            h2 {
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              font-size: 18px;
+              font-weight: 100;
+              color: $xColor;
+            }
+            h1 {
+              font-family: $belfair;
+              font-weight: 100;
+              color: #fff;
+              font-size: 60px;
+              margin: 10px 0;
+            }
+            p {
+              color: $xColor;
+              font-size: 20px;
+              width: 100%;
+              line-height: 1.6;
+              width: 75%;
+              @include respond(tablet) {
+                width: 100%;
+              }
+            }
+            @include respond(tablet) {
+              text-align: center;
+            }
+          }
+        }
+      }
+      .images {
+        .portrait {
+          height: auto;
+          width: -webkit-fill-available;
+          @include respond(tablet) {
+            display: none;
+          }
+          @include respond(mobile) {
+            display: none;
+          }
+        }
+        .landscape {
+          display: none;
+          @include respond(tablet) {
+            display: block !important;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

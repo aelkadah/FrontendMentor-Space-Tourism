@@ -4,6 +4,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-top: 40px;
+  z-index: 999;
   @include respond(tablet) {
     padding-top: 20px;
   }
@@ -96,6 +97,7 @@ nav {
     z-index: 5;
     a {
       color: #fff;
+      cursor: pointer;
     }
     @include respond(mobile) {
       display: block;
