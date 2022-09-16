@@ -91,13 +91,18 @@ nav {
     }
   }
   .menuBtn {
-    display: none;
+    position: relative;
+    right: 0;
     font-size: 24px;
-    margin-right: 55px;
     z-index: 5;
+    display: none;
     a {
       color: #fff;
       cursor: pointer;
+    }
+    &.active {
+      position: fixed;
+      top: auto;
     }
     @include respond(mobile) {
       display: block;
@@ -105,7 +110,7 @@ nav {
     }
   }
   .vertNav {
-    position: absolute;
+    position: fixed;
     min-height: 100%;
     width: 60%;
     top: 0px;
@@ -115,9 +120,9 @@ nav {
     list-style: none;
     padding-top: 80px;
     padding-left: 40px;
-    display: none;
     flex-direction: column;
     gap: 20px;
+    display: none;
     &.active {
       display: flex !important;
       @include respond(mobilemin) {
