@@ -1,10 +1,16 @@
 document.onload = setActive();
 function setActive() {
-  let currentLocation = location.href;
+  let currentLocation = location.pathname;
   let menuLis = document.querySelectorAll("li");
   let menuLisA = document.querySelectorAll("li a");
   for (let i = 0; i < menuLis.length; i++) {
-    if (menuLisA[i].href === currentLocation) {
+    if (currentLocation == "/") {
+      menuLisA.forEach((liA) => {
+        if (liA.pathname == "/index.html") {
+          liA.parentElement.classList.add("active");
+        }
+      });
+    } else if (menuLisA[i].pathname == currentLocation) {
       menuLis[i].classList.add("active");
     }
   }
