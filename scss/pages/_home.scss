@@ -14,6 +14,7 @@
   @include respond(tablet) {
     background-image: url(../imgs/home/background-tablet.jpg);
     background-position: bottom;
+    justify-content: normal;
   }
   @include respond(mobile) {
     background-image: url(../imgs/home/background-mobile.jpg);
@@ -31,6 +32,9 @@
       align-items: center;
       gap: 40px;
       flex: 1;
+      flex: 0 !important;
+    }
+    @include respond(mobile) {
     }
     .text {
       h2 {

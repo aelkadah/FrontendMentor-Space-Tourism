@@ -233,6 +233,7 @@ nav .vertNav li:not(.active)::after {
   #home {
     background-image: url(../imgs/home/background-tablet.jpg);
     background-position: bottom;
+    justify-content: normal;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -255,6 +256,7 @@ nav .vertNav li:not(.active)::after {
     align-items: center;
     gap: 40px;
     flex: 1;
+    flex: 0 !important;
   }
 }
 #home .container .text h2 {
@@ -319,6 +321,7 @@ nav .vertNav li:not(.active)::after {
   #destination {
     background-image: url(../imgs/destination/background-tablet.jpg);
     background-position: bottom;
+    justify-content: normal;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -475,6 +478,7 @@ nav .vertNav li:not(.active)::after {
   #crew {
     background-image: url(../imgs/crew/background-tablet.jpg);
     background-position: bottom;
+    justify-content: normal;
   }
 }
 @media only screen and (max-width: 768px) {
